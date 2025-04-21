@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GEYWOOD ACRES STABLE| Home</title>
+  <link rel="stylesheet" href="st.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="slider">
+     <img id="slider image" src="h7.jpg" alt="cool horse">
+
+  </div>
+  <!--Dark Mode Toggle-->
+  
+  <button id="theme-toggle">Toggle Dark Mode</button>
+  <!--Search Bar-->
+  <div class="Search-container">
+    <input type="text" id="SearchInput" placeholder="Search horses..."/>
+  </div>  
+  <header>
+    
+    <h1>GEYWOOD ACRES STABLE</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="breed.html">Breeds</a></li>
+        <li><a href="caree.html">Care Tips</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="deli.html">Delivery</a>
+        <li><a href="cont.html">Contact</a></li>
+         <li><a href="contacts.html">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+  <!--Newletter Popup-->
+  <div id="newsletter-popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>Get the latest tips and updates about horses</p>
+      <form id="newsletter-form">
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+ <!--Main content-->
+  <main>
+    <section class="welcome">
+      <h2>Welcome to GEYWOOD ACRES STABLE</h2>
+      <p>Your #1 place to learn, love, and live with puppies. Whether you’re a first-time dog owner or a lifelong pup lover, we have everything you need.</p>
+      <img src="h4.jpg" alt="beautifull horses" class="responsive-img"/>
+    </section>
+    <section class="hero">
+        <h2>Welcome to GEYWOOD ACRES STABLE</h2>
+        <p>Your one-stop hub for all things adorable and furry!</p>
+        <a href="breed.html" class="btn">Explore Breeds</a>
+      </section>
+      <section class="testimonials">
+        <h2>What horse Lovers Say </h2>
+        <blockquote>"This website helped me choose the perfect horse!" – Sarah</blockquote>
+        <blockquote>"Amazing tips for first-time dog parents!" – Mike</blockquote>
+        <blockquote>"this website as helped in finding the pup of my dreams" – spark </blockquote>
+        <blockquote>"i saw this site and it was wow" – samjr</blockquote>
+      </section>
+      
+      <img src="h14.jpg" data-aos="fade-up" />
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="h1.jpg"></div>
+          <div class="swiper-slide"><img src="h9.jpg"></div>
+          <div class="swiper-slide"><img src="h16.jpg"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div> 
+  </main> 
+  <footer>
+    <p>&copy; 2023 GEYWOOD ACRES STABLE. All rights reserved.</p>
+  </footer>
+  <!--Tawk to live chat widget-->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{},Tawk_loadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/YOUR_personal_ID/1gvmrsdpv';
+      s1.charset='UTF-8';
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <script src="fm.js"></script>
+  <script>
+    const image =[
+      "h1.jpg","h2.jpg","h3.jpg"
+
+    ];
+    let current = 0;
+    
+  </script>
+</body>
+</html>
+

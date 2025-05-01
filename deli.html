@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="st.css"/>
   <script defer src="fm.js"></script>
 </head>
-<body>
+<body> 
   <header>
     <h1>GEYWOOD ACRES STABLE</h1>
     <nav>
@@ -18,6 +18,9 @@
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="deli.html" class="active">Delivery</a></li>
         <li><a href="cont.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+
       </ul>
     </nav>
   </header>
@@ -26,22 +29,102 @@
     <section>
       <h2>Delivery available</h2>
       <p></p>
-      <form id="Delivery form">
-        <label for="Delivery fair">Delivery fair:</label>
-        <input type="number" id="number" required />
-        <label for="pay by MTN">pay by MTN:</label>
-        <input type="number" id="number" required />
-
-       
-
-        <label for="">pay by ORANGE:</label>
-        <textarea id="number" rows="2" required></textarea>
-        <button type="submit">Send </button>
-      </form>
+      <form
+      action="https://formspree.io/f/xovdqjqz"
+      class="fs-form"
+      target="_top"
+      method="POST"
+    >
+      <fieldset>
+        <div class="fs-field">
+          <label class="fs-label" for="customer-name">Customer Name</label>
+          <input
+            class="fs-input"
+            id="customer-name"
+            name="customer-name"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+        <div class="fs-field">
+          <label class="fs-label" for="customer-phone">Phone Number</label>
+          <input
+            class="fs-input"
+            id="customer-phone"
+            name="customer-phone"
+            placeholder="(XXX) XXX-XXXX"
+            required
+          />
+        </div>
+        <div class="fs-field">
+          <label class="fs-label" for="customer-email">Email Address</label>
+          <input
+            class="fs-input"
+            id="customer-email"
+            name="customer-email"
+            required
+          />
+        </div>
+      </fieldset>
+      <div class="fs-field">
+        <label class="fs-label" for="order-date">Order Date</label>
+        <input
+          class="fs-input"
+          id="order-date"
+          name="order-date"
+          placeholder="YYYY-MM-DD"
+          required
+        />
+      </div>
+      <div class="fs-field">
+        <label class="fs-label" for="delivery-option">
+          Preferred Delivery Option
+        </label>
+        <select
+          class="fs-select"
+          id="delivery-option"
+          name="delivery-option"
+          required
+        >
+          <option value="pick-up">Pick-Up</option>
+          <option value="home-delivery">Home Delivery</option>
+        </select>
+      </div>
+      <div class="fs-field">
+        <label class="fs-label" for="baked-goods-type">Type of  Goods</label>
+        <select
+          class="fs-select"
+          id="baked-goods-type"
+          name="baked-goods-type"
+          required
+        >
+          <option value="">Gypsy cob</option>
+          <option value="cookies">Irish sport horse</option>
+          <option value="pies">Highland pony</option>
+          <option value="bread">Warm blood</option>
+          <option value="bread">Welsh pony and cob</option>
+          <option value="bread">Thoroughbred</option>
+        </select>
+      </div>
+      <div class="fs-field">
+        <label class="fs-label" for="customization-options">
+          Customization Options
+        </label>
+        <textarea
+          class="fs-textarea"
+          id="customization-options"
+          name="customization-options"
+          placeholder=""
+        ></textarea>
+      </div>
+      <div class="fs-button-group">
+        <button class="fs-button" type="submit">Submit</button>
+      </div>
+    </form>
       <p id="formMessage"></p>
     </section>
   </main>
-
+  <script src="fm.js"></script>
   <footer>
     <p>&copy; 2023 GEYWOOD ACRES STABLE. All rights reserved.</p>
   </footer>

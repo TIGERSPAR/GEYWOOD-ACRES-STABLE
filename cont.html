@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GEYWOOD ACRES STABLE| Contact Us</title>
+  <title>GEYWOOD ACRES STABLE | Contact Us</title>
   <link rel="stylesheet" href="st.css"/>
   <script defer src="fm.js"></script>
 </head>
 <body>
-  <header>
+  <header> 
     <h1>GEYWOOD ACRES STABLE</h1>
     <nav>
       <ul>
@@ -18,6 +18,8 @@
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="deli.html">Delivery</a></li>
         <li><a href="cont.html" class="active">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
       </ul>
     </nav>
   </header>
@@ -25,24 +27,35 @@
   <main>
     <section>
       <h2>Contact Us</h2>
-      <p>Have questions, feedback or horse love to share? Drop us a message!</p>
-      <form id="contactForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" required />
+      <p>Have questions, feedback, or horse love to share? Drop us a message!</p>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" required />
-
-        <label for="message">Message:</label>
-        <textarea id="message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
+      <!-- Contact Form -->
+      <form action="https://formspree.io/f/mzzrpqvo" method="POST">
+        <label>
+          Your Email:
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Your Message:
+          <textarea name="message" required></textarea>
+        </label>
+        <button type="submit">Send</button>
       </form>
       <p id="formMessage"></p>
     </section>
   </main>
 
+  <div class="info">
+    <h3>Visit or Reach Us</h3>
+    <p><strong>Address:</strong> Geywood Acres Stable, Farm Road, Limbe, Cameroon</p>
+    <p><strong>Phone:</strong> +237 678 123 456</p>
+    <p><strong>Email:</strong> info@geywoodacres.com</p>
+    <p><strong>Opening Hours:</strong> Mon - Sat: 8:00am - 6:00pm</p>
+  </div>
+
   <footer>
     <p>&copy; 2023 GEYWOOD ACRES STABLE. All rights reserved.</p>
   </footer>
+
 </body>
 </html>

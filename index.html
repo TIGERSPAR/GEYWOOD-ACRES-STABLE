@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GEYWOOD ACRES STABLE| Home</title>
+  <title>GEYWOOD ACRES STABLE | Home</title>
   <link rel="stylesheet" href="st.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -12,19 +12,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="slider">
-     <img id="slider image" src="h7.jpg" alt="cool horse">
-
-  </div>
-  <!--Dark Mode Toggle-->
-  
-  <button id="theme-toggle">Toggle Dark Mode</button>
-  <!--Search Bar-->
+  <audio autoplay loop hidden> 
+    <source src="B.m" type="audio/mpeg"/>
+  </audio>
   <div class="Search-container">
     <input type="text" id="SearchInput" placeholder="Search horses..."/>
   </div>  
+
   <header>
-    
+    <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>
+
     <h1>GEYWOOD ACRES STABLE</h1>
     <nav>
       <ul>
@@ -32,14 +29,14 @@
         <li><a href="breed.html">Breeds</a></li>
         <li><a href="caree.html">Care Tips</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="deli.html">Delivery</a>
+        <li><a href="deli.html">Delivery</a></li>
         <li><a href="cont.html">Contact</a></li>
-         <li><a href="contacts.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
       </ul>
     </nav>
-
   </header>
-  <!--Newletter Popup-->
+
   <div id="newsletter-popup" class="popup">
     <div class="popup-content">
       <span class="close-btn" onclick="closePopup()">&times;</span>
@@ -51,40 +48,123 @@
       </form>
     </div>
   </div>
- <!--Main content-->
+
   <main>
     <section class="welcome">
-      <h2>Welcome to GEYWOOD ACRES STABLE</h2>
-      <p>Your #1 place to learn, love, and live with puppies. Whether you’re a first-time dog owner or a lifelong pup lover, we have everything you need.</p>
-      <img src="h4.jpg" alt="beautifull horses" class="responsive-img"/>
-    </section>
-    <section class="hero">
+      <div class="content">
         <h2>Welcome to GEYWOOD ACRES STABLE</h2>
-        <p>Your one-stop hub for all things adorable and furry!</p>
-        <a href="breed.html" class="btn">Explore Breeds</a>
-      </section>
-      <section class="testimonials">
-        <h2>What horse Lovers Say </h2>
-        <blockquote>"This website helped me choose the perfect horse!" – Sarah</blockquote>
-        <blockquote>"Amazing tips for first-time dog parents!" – Mike</blockquote>
-        <blockquote>"this website as helped in finding the pup of my dreams" – spark </blockquote>
-        <blockquote>"i saw this site and it was wow" – samjr</blockquote>
-      </section>
-      
-      <img src="h14.jpg" data-aos="fade-up" />
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="h1.jpg"></div>
-          <div class="swiper-slide"><img src="h9.jpg"></div>
-          <div class="swiper-slide"><img src="h16.jpg"></div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div> 
-  </main> 
-  <footer>
-    <p>&copy; 2023 GEYWOOD ACRES STABLE. All rights reserved.</p>
-  </footer>
-  <!--Tawk to live chat widget-->
+        <p>Your #1 place to learn, love, and ride with horses. Whether you’re a first-time owner or a lifelong equestrian, we have everything you need.</p>
+      </div>
+      <div class="slider">
+        <img class="slide" src="h11.jpg" alt="Horse 1">
+        <img class="slide" src="h19.jpg" alt="Horse 2">
+        <img class="slide" src="h17.jpg" alt="Horse 3">
+        <img class="slide" src="h2.jpg" alt="Horse 4">
+        <a class="prev" onclick="changeSlide(-1)">❮</a>
+        <a class="next" onclick="changeSlide(1)">❯</a>
+      </div>
+      <script>
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("slide");
+
+        function showSlide(index) {
+          for (let i = 0; i < slides.length; i++) {
+            slides[i].classList.remove("active");
+          }
+          slides[index].classList.add("active");
+        }
+
+        function changeSlide(n) {
+          slideIndex += n;
+          if (slideIndex < 0) {
+            slideIndex = slides.length - 1;
+          } else if (slideIndex >= slides.length) {
+            slideIndex = 0;
+          }
+          showSlide(slideIndex);
+        }
+
+        function autoSlide() {
+          slideIndex++;
+          if (slideIndex >= slides.length) slideIndex = 0;
+          showSlide(slideIndex);
+          setTimeout(autoSlide, 5000);
+        }
+        autoSlide();
+      </script>
+      <img src="h4.jpg" alt="Beautiful horses" class="responsive-img"/>
+    </section>
+
+    <section class="hero">
+      <h2>Welcome to GEYWOOD ACRES STABLE</h2>
+      <p>Your one-stop hub for all things equestrian!</p>
+      <a href="breed.html" class="btn">Explore Breeds</a>
+    </section>
+
+    <div class="slider">
+      <img id="sliderImage" src="h10.jpg" alt="Show horse">
+    </div>
+
+    <section class="testimonials">
+      <h2>What Horse Lovers Say</h2>
+      <blockquote>"This website helped me choose the perfect horse!" – Sarah</blockquote>
+      <blockquote>"Amazing tips for first-time horse owners!" – Mike</blockquote>
+      <blockquote>"This website helped in finding the horse of my dreams" – Spark</blockquote>
+      <blockquote>"I saw this site and it was wow!" – Samjr</blockquote>
+    </section>
+
+    <img src="h14.jpg" data-aos="fade-up" />
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="h1.jpg"></div>
+        <div class="swiper-slide"><img src="h9.jpg"></div>
+        <div class="swiper-slide"><img src="h16.jpg"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div> 
+
+    <div class="image-row">
+      <figure><img src="b1.jpg" alt="Horse in field" style="width: 300px; height: 300px;"><figcaption></figcaption></figure>
+      <img src="b2.jpg" alt="Brown horse" style="width: 300px; height: 300px;">
+      <img src="b5.jpg" alt="Grazing horse" style="width: 300px; height: 300px;">
+      <img src="b3.jpg" alt="Foal standing" style="width: 300px; height: 200px;">
+      <img src="b4.jpg" alt="Horse and rider" style="width: 300px; height: 200px;">
+      <img src="b6.jpg" alt="Jumping horse" style="width: 300px; height: 200px;">
+    </div>
+  </main>
+
+  <button onclick="openForm()" style="margin-top: 20px;">📩 Contact Us</button>
+  <div id="contactForm" style="display:none; position:fixed; top:20%; left:35%; background:white; padding:20px; box-shadow:0 5px 20px rgba(0,0,0,0.5); border-radius:10px; z-index:999;">
+    <h2>Contact Us</h2>	
+    <input type="text" placeholder="Your Name" style="display:block; width:100%; margin-bottom:10px;">
+    <input type="email" placeholder="Your Email" style="display:block; width:100%; margin-bottom:10px;">
+    <textarea placeholder="Your Message" style="width:100%; margin-bottom:10px;"></textarea>
+    <button onclick="closeForm()">Send ✉️</button>
+  </div>
+
+  <script>
+    function openForm() {
+      document.getElementById('contactForm').style.display = 'block';
+    }
+    function closeForm() {
+      document.getElementById('contactForm').style.display = 'none';
+    }
+  </script>
+
+  <script>
+    const images = ["h1.jpg", "h2.jpg", "h14.jpg", "h4.jpg"];
+    let current = 0;
+    const imgElement = document.getElementById("sliderImage");
+    setInterval(() => {
+      current = (current + 1) % images.length;
+      imgElement.src = images[current];
+    }, 5000);
+  </script>
+
+  <script>
+    AOS.init();
+  </script>
+
   <script type="text/javascript">
     var Tawk_API=Tawk_API||{},Tawk_loadStart=new Date();
     (function(){
@@ -95,15 +175,27 @@
       s0.parentNode.insertBefore(s1,s0);
     })();
   </script>
-  <script src="fm.js"></script>
-  <script>
-    const image =[
-      "h1.jpg","h2.jpg","h3.jpg"
 
-    ];
-    let current = 0;
-    
+  <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+  <script>
+    window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+    formbutton("create", {
+      action: "https://formspree.io/f/xyzwgabn",
+      title: "How can we help?",
+      fields: [
+        { type: "email", label: "Email:", name: "email", required: true, placeholder: "your@email.com" },
+        { type: "textarea", label: "Message:", name: "message", placeholder: "What's on your mind?" },
+        { type: "submit" }
+      ],
+      styles: {
+        title: { backgroundColor: "gray" },
+        button: { backgroundColor: "gray" }
+      }
+    });
   </script>
+  <script src="fm.js"></script>
+  <footer>
+    <p>&copy; 2023 GEYWOOD ACRES STABLE. All rights reserved.</p>
+  </footer>
 </body>
 </html>
-

@@ -3,44 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GEYWOOD ACRES STABLE| Breeds</title>
+  <title>GEYWOOD ACRES STABLE | Breeds</title>
   <link rel="stylesheet" href="st.css"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .breed-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .breed-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      overflow: hidden;
+      transition: transform 0.3s;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .breed-card:hover {
+      transform: scale(1.05);
+    }
+
+    .breed-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .breed-card h2 {
+      margin: 15px 0;
+      color: #0072ff;
+      font-size: 1.5rem;
+    }
+
+    .breed-card p {
+      color: #555;
+      font-size: 1rem;
+      margin: 0 0 10px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .breed-grid {
+        gap: 10px;
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>GEYWOOD ACRES STABLE</h1>
     <nav>
       <ul>
-
         <li><a href="index.html">Home</a></li>
         <li><a href="breed.html" class="active">Breeds</a></li>
         <li><a href="caree.html">Care Tips</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="deli.html">Delivery</a>
+        <li><a href="deli.html">Delivery</a></li>
         <li><a href="cont.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section>
-      <h2>Popular horse Breeds</h2>
-      <ul class="breed-list">
-        <li><strong>Gypsy cob</strong></li>
-        <li><strong>Irish sport horse</strong></li>
-        <li><strong>Highland pony</strong></li>
-        <li><strong>Warm blood</strong></li>
-        <li><strong>Welsh pony and cob</strong></li>
-        <li><strong>Thoroughbred</strong></li>
-      </ul>
-      <img src="h14.jpg" alt="horse breeds" class="responsive-img"/>
-      <input type="text" id="breed-search" placeholder="Search breeds..." />
-<ul id="breed-list">
-  <li></li>
-  <li></li>
-  <li></li>
-  <!-- Add more breeds here -->
-</ul>
+      <h2>Popular Horse Breeds</h2>
+      <div class="breed-grid">
+        <div class="breed-card">
+          <img src="h7.jpg" alt="Gypsy Cob">
+          <h2>Gypsy Cob</h2>
+          <p>A majestic and gentle breed, known for its strength and beauty.</p>
+        </div>
+        <div class="breed-card">
+          <img src="h19.jpg" alt="Irish Sport Horse">
+          <h2>Irish Sport Horse</h2> 
+          <p>Versatile and athletic, ideal for various equestrian disciplines.</p>
+        </div>
+        <div class="breed-card">
+          <img src="h1.jpg" alt="Highland Pony">
+          <h2>Highland Pony</h2>
+          <p>Robust and hardy, well suited for the rugged highlands.</p>
+        </div>
+        <div class="breed-card">
+          <img src="h4.jpg" alt="Warmblood">
+          <h2>Warmblood</h2> 
+          <p>Elegant and powerful, perfect for dressage and jumping.</p>
+        </div>
+        <div class="breed-card">
+          <img src="h5.jpg" alt="Welsh Pony and Cob">
+          <h2>Welsh Pony and Cob</h2> 
+          <p>Smart and kind, perfect for kids and adults alike.</p>
+        </div>
+        <div class="breed-card">
+          <img src="h9.jpg" alt="Thoroughbred">
+          <h2>Thoroughbred</h2> 
+          <p>Fast and agile, ideal for racing and competitive events.</p>
+        </div>
+      </div>
     </section>
   </main>
 
